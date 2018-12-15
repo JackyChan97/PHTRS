@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Streetadress:</strong>
+  <%= @pothole.streetAdress %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @pothole.size %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @pothole.location %>
+</p>
+
+<p>
+  <strong>District:</strong>
+  <%= @pothole.district %>
+</p>
+
+<%= link_to 'Edit', edit_pothole_path(@pothole) %> |
+<%= link_to 'Back', potholes_path %>

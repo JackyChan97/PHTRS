@@ -1,0 +1,2 @@
+class Pothole < ApplicationRecord
+end
