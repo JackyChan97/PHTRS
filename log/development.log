@@ -331,3 +331,1294 @@ Processing by PotholesController#index as HTML
 Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-12-16 17:36:43 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rails/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rails/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6.1/lib/rails/templates/rails/welcome/index.html.erb (5.5ms)
+Completed 200 OK in 134ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-16 17:36:54 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 466ms (Views: 461.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-16 17:36:56 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (197.0ms)
+  Rendered potholes/new.html.erb within layouts/application (198.4ms)
+Completed 200 OK in 267ms (Views: 250.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/potholes" for 127.0.0.1 at 2018-12-16 17:37:07 -0800
+Processing by PotholesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BBq6bVrplfIooD81xbFMMHoO7rnUX9n+uqdnqiiDvmljt4ppag8YGj8nat5qLmQZV9ZTYh67E3EkKdjzSKPltg==", "pothole"=>{"streetAdress"=>"1234", "size"=>"12", "location"=>"2141213", "district"=>"4214124214124122142"}, "commit"=>"Create Pothole"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "potholes" ("streetAdress", "size", "location", "district", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["streetAdress", "1234"], ["size", 12], ["location", "2141213"], ["district", "4214124214124122142"], ["created_at", "2018-12-17 01:37:07.866047"], ["updated_at", "2018-12-17 01:37:07.866047"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/potholes/1
+Completed 302 Found in 12ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/potholes/1" for 127.0.0.1 at 2018-12-16 17:37:07 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering potholes/show.html.erb within layouts/application
+  Rendered potholes/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 94ms (Views: 40.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-16 18:26:07 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 228ms (Views: 203.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-16 18:26:09 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (17.5ms)
+  Rendered potholes/new.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-16 18:31:39 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (192.8ms)
+  Rendered potholes/new.html.erb within layouts/application (195.3ms)
+Completed 500 Internal Server Error in 204ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `raido_button_tag' for #<#<Class:0xb129098>:0xb8620bc>
+Did you mean?  radio_button_tag):
+    23: 
+    24:   <div class="field">
+    25:     <%= form.label :location %>
+    26: 	<%= raido_button_tag(:location, "middle") %>
+    27: 	<%= label_tag(:location_middle, "middle") %>
+    28: 	<%= raido_button_tag(:location, "right") %>
+    29: 	<%= label_tag(:location_right, "right") %>
+  
+app/views/potholes/_form.html.erb:26:in `block in _app_views_potholes__form_html_erb__269559836_96462640'
+app/views/potholes/_form.html.erb:1:in `_app_views_potholes__form_html_erb__269559836_96462640'
+app/views/potholes/new.html.erb:3:in `_app_views_potholes_new_html_erb__410138484_96671280'
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-16 18:33:32 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (181.6ms)
+  Rendered potholes/new.html.erb within layouts/application (183.0ms)
+Completed 500 Internal Server Error in 189ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `raido_button_tag' for #<#<Class:0xb129098>:0xb4ae964c>
+Did you mean?  radio_button_tag):
+    23: 
+    24:   <div class="field">
+    25:     <%= form.label :location %>
+    26: 	<%= raido_button_tag(:pothole_location, "middle") %>
+    27: 	<%= label_tag(:pothole_location_middle, "middle") %>
+    28: 	<%= raido_button_tag(:pothole_location, "right") %>
+    29: 	<%= label_tag(:pothole_location_right, "right") %>
+  
+app/views/potholes/_form.html.erb:26:in `block in _app_views_potholes__form_html_erb__269559836__633426148'
+app/views/potholes/_form.html.erb:1:in `_app_views_potholes__form_html_erb__269559836__633426148'
+app/views/potholes/new.html.erb:3:in `_app_views_potholes_new_html_erb__410138484__631809518'
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-16 18:33:34 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (146.4ms)
+  Rendered potholes/new.html.erb within layouts/application (148.0ms)
+Completed 500 Internal Server Error in 154ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `raido_button_tag' for #<#<Class:0xb129098>:0xb4106d50>
+Did you mean?  radio_button_tag):
+    23: 
+    24:   <div class="field">
+    25:     <%= form.label :location %>
+    26: 	<%= raido_button_tag(:pothole_location, "middle") %>
+    27: 	<%= label_tag(:pothole_location_middle, "middle") %>
+    28: 	<%= raido_button_tag(:pothole_location, "right") %>
+    29: 	<%= label_tag(:pothole_location_right, "right") %>
+  
+app/views/potholes/_form.html.erb:26:in `block in _app_views_potholes__form_html_erb__269559836__635491368'
+app/views/potholes/_form.html.erb:1:in `_app_views_potholes__form_html_erb__269559836__635491368'
+app/views/potholes/new.html.erb:3:in `_app_views_potholes_new_html_erb__410138484__636994328'
+Started GET "/potholes" for 127.0.0.1 at 2018-12-16 18:33:39 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-16 18:33:41 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (147.7ms)
+  Rendered potholes/new.html.erb within layouts/application (148.8ms)
+Completed 500 Internal Server Error in 153ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `raido_button_tag' for #<#<Class:0xb129098>:0xb43081a8>
+Did you mean?  radio_button_tag):
+    23: 
+    24:   <div class="field">
+    25:     <%= form.label :location %>
+    26: 	<%= raido_button_tag(:pothole_location, "middle") %>
+    27: 	<%= label_tag(:pothole_location_middle, "middle") %>
+    28: 	<%= raido_button_tag(:pothole_location, "right") %>
+    29: 	<%= label_tag(:pothole_location_right, "right") %>
+  
+app/views/potholes/_form.html.erb:26:in `block in _app_views_potholes__form_html_erb__269559836__632630198'
+app/views/potholes/_form.html.erb:1:in `_app_views_potholes__form_html_erb__269559836__632630198'
+app/views/potholes/new.html.erb:3:in `_app_views_potholes_new_html_erb__410138484__635943148'
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-16 18:34:42 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (134.1ms)
+  Rendered potholes/new.html.erb within layouts/application (135.3ms)
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `raido_button_tag' for #<#<Class:0xb129098>:0xb3feb3a8>
+Did you mean?  radio_button_tag):
+    25:     <%#= form.label :location %>
+    26: 	<%= radio_button_tag(:pothole_location, "middle") %>
+    27: 	<%= label_tag(:pothole_location_middle, "middle") %>
+    28: 	<%= raido_button_tag(:pothole_location, "right") %>
+    29: 	<%= label_tag(:pothole_location_right, "right") %>
+    30:     <%#= form.text_field :location, id: :pothole_location %>
+    31:   </div>
+  
+app/views/potholes/_form.html.erb:28:in `block in _app_views_potholes__form_html_erb__269559836__637645058'
+app/views/potholes/_form.html.erb:1:in `_app_views_potholes__form_html_erb__269559836__637645058'
+app/views/potholes/new.html.erb:3:in `_app_views_potholes_new_html_erb__410138484__637550588'
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-16 18:38:31 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (217.5ms)
+  Rendered potholes/new.html.erb within layouts/application (219.0ms)
+Completed 500 Internal Server Error in 223ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `radio_button_tag' for #<ActionView::Helpers::FormBuilder:0xb3b3a50c>
+Did you mean?  radio_button):
+    23: 
+    24:   <div class="field">
+    25:     <%#= form.label :location %>
+    26: 	<%= form.radio_button_tag(:pothole_location, "middle") %>
+    27: 	<%= form.label_tag(:pothole_location_middle, "middle") %>
+    28: 	<%= form.raido_button_tag(:pothole_location, "right") %>
+    29: 	<%= form.label_tag(:pothole_location_right, "right") %>
+  
+app/views/potholes/_form.html.erb:26:in `block in _app_views_potholes__form_html_erb__269559836__640008678'
+app/views/potholes/_form.html.erb:1:in `_app_views_potholes__form_html_erb__269559836__640008678'
+app/views/potholes/new.html.erb:3:in `_app_views_potholes_new_html_erb__410138484__639966778'
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-16 18:43:41 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (1.1ms)
+  Rendered potholes/new.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/rails/PHTRS/app/views/potholes/_form.html.erb:26: syntax error, unexpected tLABEL
+_buffer.append=( radio_button:pothole, id: :pothole_location
+                              ^
+/home/rails/PHTRS/app/views/potholes/_form.html.erb:26: syntax error, unexpected ',', expecting ')'
+ :pothole_location, :"middle", :"middle") );@output_buffer.s
+                              ^
+/home/rails/PHTRS/app/views/potholes/_form.html.erb:26: syntax error, unexpected ')', expecting keyword_end
+ation, :"middle", :"middle") );@output_buffer.safe_append='
+                              ^
+/home/rails/PHTRS/app/views/potholes/_form.html.erb:41: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/potholes/_form.html.erb:26: syntax error, unexpected tLABEL
+app/views/potholes/_form.html.erb:26: syntax error, unexpected ',', expecting ')'
+app/views/potholes/_form.html.erb:26: syntax error, unexpected ')', expecting keyword_end
+app/views/potholes/_form.html.erb:41: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/potholes/new.html.erb:3:in `_app_views_potholes_new_html_erb__410138484__620111568'
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-16 18:44:16 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (0.9ms)
+  Rendered potholes/new.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/rails/PHTRS/app/views/potholes/_form.html.erb:26: syntax error, unexpected ',', expecting =>
+ :pothole_location, :"middle", :"middle") );@output_buffer.s
+                              ^
+/home/rails/PHTRS/app/views/potholes/_form.html.erb:26: syntax error, unexpected ')', expecting keyword_end
+ation, :"middle", :"middle") );@output_buffer.safe_append='
+                              ^
+/home/rails/PHTRS/app/views/potholes/_form.html.erb:41: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/potholes/_form.html.erb:26: syntax error, unexpected ',', expecting =>
+app/views/potholes/_form.html.erb:26: syntax error, unexpected ')', expecting keyword_end
+app/views/potholes/_form.html.erb:41: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/potholes/new.html.erb:3:in `_app_views_potholes_new_html_erb__410138484__632430868'
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-16 18:45:03 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (1.1ms)
+  Rendered potholes/new.html.erb within layouts/application (9.2ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/rails/PHTRS/app/views/potholes/_form.html.erb:26: syntax error, unexpected ',', expecting =>
+: :pothole_location, "middle", "middle") );@output_buffer.sa
+                              ^
+/home/rails/PHTRS/app/views/potholes/_form.html.erb:26: syntax error, unexpected ')', expecting keyword_end
+ocation, "middle", "middle") );@output_buffer.safe_append='
+                              ^
+/home/rails/PHTRS/app/views/potholes/_form.html.erb:41: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/potholes/_form.html.erb:26: syntax error, unexpected ',', expecting =>
+app/views/potholes/_form.html.erb:26: syntax error, unexpected ')', expecting keyword_end
+app/views/potholes/_form.html.erb:41: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/potholes/new.html.erb:3:in `_app_views_potholes_new_html_erb__410138484__639965098'
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-16 18:45:27 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (1.2ms)
+  Rendered potholes/new.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/rails/PHTRS/app/views/potholes/_form.html.erb:26: syntax error, unexpected tSTRING_BEG, expecting ')'
+thole, id: :pothole_location "middle" "middle" );@output_buf
+                              ^):
+  
+app/views/potholes/_form.html.erb:26: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/potholes/new.html.erb:3:in `_app_views_potholes_new_html_erb__410138484__630136728'
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-16 18:45:45 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (0.9ms)
+  Rendered potholes/new.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/rails/PHTRS/app/views/potholes/_form.html.erb:26: syntax error, unexpected ',', expecting =>
+: :pothole_location, "middle", "middle" );@output_buffer.saf
+                              ^):
+  
+app/views/potholes/_form.html.erb:26: syntax error, unexpected ',', expecting =>
+app/views/potholes/new.html.erb:3:in `_app_views_potholes_new_html_erb__410138484__619874038'
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-16 18:53:41 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (1.0ms)
+  Rendered potholes/new.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/rails/PHTRS/app/views/potholes/_form.html.erb:26: syntax error, unexpected ',', expecting =>
+ :pothole_location, :"middle", :"middle" );@output_buffer.sa
+                              ^):
+  
+app/views/potholes/_form.html.erb:26: syntax error, unexpected ',', expecting =>
+app/views/potholes/new.html.erb:3:in `_app_views_potholes_new_html_erb__410138484__634762908'
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-16 18:55:16 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (7.5ms)
+  Rendered potholes/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-16 18:55:45 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (9.6ms)
+  Rendered potholes/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 36ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-16 18:55:46 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (10.0ms)
+  Rendered potholes/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 52ms (Views: 47.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-16 18:57:36 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (37.2ms)
+  Rendered potholes/new.html.erb within layouts/application (40.4ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `delete' for :middle:Symbol):
+    22:   </div>
+    23: 
+    24:   <div class="field">
+    25: 	<%= radio_button :pothole, :pothole_location, :"middle", :"middle" %>
+    26:     <% form.label :location %>
+    27:     <% form.text_field :location, id: :pothole_location %>
+    28:   </div>
+  
+app/views/potholes/_form.html.erb:25:in `block in _app_views_potholes__form_html_erb__269559836__639302788'
+app/views/potholes/_form.html.erb:1:in `_app_views_potholes__form_html_erb__269559836__639302788'
+app/views/potholes/new.html.erb:3:in `_app_views_potholes_new_html_erb__410138484__639285428'
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-16 18:58:14 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (1.3ms)
+  Rendered potholes/new.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/rails/PHTRS/app/views/potholes/_form.html.erb:25: syntax error, unexpected tINTEGER, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+pothole, :pothole_location, :1, :"middle" );@output_buffer.s
+                              ^):
+  
+app/views/potholes/_form.html.erb:25: syntax error, unexpected tINTEGER, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/potholes/new.html.erb:3:in `_app_views_potholes_new_html_erb__410138484__634733038'
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-16 18:58:38 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (1.0ms)
+  Rendered potholes/new.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/rails/PHTRS/app/views/potholes/_form.html.erb:25: syntax error, unexpected ',', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+uffer.append=( radio_button :, :, :1, :"middle" );@output_bu
+                              ^):
+  
+app/views/potholes/_form.html.erb:25: syntax error, unexpected ',', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/potholes/new.html.erb:3:in `_app_views_potholes_new_html_erb__410138484_103256540'
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-16 18:58:39 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (1.1ms)
+  Rendered potholes/new.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/rails/PHTRS/app/views/potholes/_form.html.erb:25: syntax error, unexpected ',', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+uffer.append=( radio_button :, :, :1, :"middle" );@output_bu
+                              ^):
+  
+app/views/potholes/_form.html.erb:25: syntax error, unexpected ',', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/potholes/new.html.erb:3:in `_app_views_potholes_new_html_erb__410138484__632667768'
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-16 18:58:40 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (0.9ms)
+  Rendered potholes/new.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/rails/PHTRS/app/views/potholes/_form.html.erb:25: syntax error, unexpected ',', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+uffer.append=( radio_button :, :, :1, :"middle" );@output_bu
+                              ^):
+  
+app/views/potholes/_form.html.erb:25: syntax error, unexpected ',', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/potholes/new.html.erb:3:in `_app_views_potholes_new_html_erb__410138484__647172188'
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-16 18:59:30 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (2.9ms)
+  Rendered potholes/new.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 3..4)):
+    22:   </div>
+    23: 
+    24:   <div class="field">
+    25: 	<%= radio_button %>
+    26:     <% form.label :location %>
+    27:     <% form.text_field :location, id: :pothole_location %>
+    28:   </div>
+  
+app/views/potholes/_form.html.erb:25:in `block in _app_views_potholes__form_html_erb__269559836__637310068'
+app/views/potholes/_form.html.erb:1:in `_app_views_potholes__form_html_erb__269559836__637310068'
+app/views/potholes/new.html.erb:3:in `_app_views_potholes_new_html_erb__410138484__637239488'
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-16 18:59:55 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (1.0ms)
+  Rendered potholes/new.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/rails/PHTRS/app/views/potholes/_form.html.erb:25: syntax error, unexpected tINTEGER, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+uffer.append=( radio_button :1);@output_buffer.safe_append='
+                              ^):
+  
+app/views/potholes/_form.html.erb:25: syntax error, unexpected tINTEGER, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/potholes/new.html.erb:3:in `_app_views_potholes_new_html_erb__410138484__643859178'
+Started GET "/" for 127.0.0.1 at 2018-12-17 08:29:16 -0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rails/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rails/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6.1/lib/rails/templates/rails/welcome/index.html.erb (15.8ms)
+Completed 200 OK in 148ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-17 08:29:22 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (44.9ms)
+Completed 200 OK in 786ms (Views: 776.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-17 08:29:25 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (1.4ms)
+  Rendered potholes/new.html.erb within layouts/application (17.5ms)
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/rails/PHTRS/app/views/potholes/_form.html.erb:25: syntax error, unexpected tINTEGER, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+uffer.append=( radio_button :1);@output_buffer.safe_append='
+                              ^):
+  
+app/views/potholes/_form.html.erb:25: syntax error, unexpected tINTEGER, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/potholes/new.html.erb:3:in `_app_views_potholes_new_html_erb___952464551_93807560'
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-17 08:30:30 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (117.7ms)
+  Rendered potholes/new.html.erb within layouts/application (120.1ms)
+Completed 200 OK in 144ms (Views: 143.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-17 08:32:45 -0800
+Processing by PotholesController#new as HTML
+Completed 500 Internal Server Error in 7ms
+
+
+  
+ArgumentError (Unknown validator: 'DistrictValidator'):
+  
+app/models/pothole.rb:2:in `<class:Pothole>'
+app/models/pothole.rb:1:in `<top (required)>'
+app/controllers/potholes_controller.rb:17:in `new'
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-17 08:37:15 -0800
+Processing by PotholesController#new as HTML
+Completed 500 Internal Server Error in 9ms
+
+
+  
+ArgumentError (Unknown validator: 'DistrictValidator'):
+  
+app/models/pothole.rb:2:in `<class:Pothole>'
+app/models/pothole.rb:1:in `<top (required)>'
+app/controllers/potholes_controller.rb:17:in `new'
+Started GET "/potholes" for 127.0.0.1 at 2018-12-17 08:37:27 -0800
+Processing by PotholesController#index as HTML
+Completed 500 Internal Server Error in 8ms
+
+
+  
+ArgumentError (Unknown validator: 'DistrictValidator'):
+  
+app/models/pothole.rb:2:in `<class:Pothole>'
+app/models/pothole.rb:1:in `<top (required)>'
+app/controllers/potholes_controller.rb:7:in `index'
+Started GET "/potholes" for 127.0.0.1 at 2018-12-17 08:37:35 -0800
+Processing by PotholesController#index as HTML
+Completed 500 Internal Server Error in 4ms
+
+
+  
+ArgumentError (Unknown validator: 'LocationValidator'):
+  
+app/models/pothole.rb:2:in `<class:Pothole>'
+app/models/pothole.rb:1:in `<top (required)>'
+app/controllers/potholes_controller.rb:7:in `index'
+Started GET "/potholes" for 127.0.0.1 at 2018-12-17 08:38:49 -0800
+Processing by PotholesController#index as HTML
+Completed 500 Internal Server Error in 8ms
+
+
+  
+ArgumentError (Unknown validator: 'DistrictValidator'):
+  
+app/models/application_record.rb:3:in `<class:ApplicationRecord>'
+app/models/application_record.rb:1:in `<top (required)>'
+app/models/pothole.rb:1:in `<top (required)>'
+app/controllers/potholes_controller.rb:7:in `index'
+Started GET "/potholes" for 127.0.0.1 at 2018-12-17 08:41:18 -0800
+Processing by PotholesController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+
+  
+ArgumentError (You need to supply at least one attribute):
+  
+app/models/pothole.rb:2:in `<class:Pothole>'
+app/models/pothole.rb:1:in `<top (required)>'
+app/controllers/potholes_controller.rb:7:in `index'
+Started GET "/potholes" for 127.0.0.1 at 2018-12-17 08:41:53 -0800
+Processing by PotholesController#index as HTML
+Completed 500 Internal Server Error in 4ms
+
+
+  
+ArgumentError (You need to supply at least one attribute):
+  
+app/models/pothole.rb:2:in `<class:Pothole>'
+app/models/pothole.rb:1:in `<top (required)>'
+app/controllers/potholes_controller.rb:7:in `index'
+Started GET "/potholes" for 127.0.0.1 at 2018-12-17 08:46:26 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 44ms (Views: 38.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-17 08:46:29 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (7.2ms)
+  Rendered potholes/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 43ms (Views: 42.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/potholes" for 127.0.0.1 at 2018-12-17 08:47:09 -0800
+Processing by PotholesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BYGJqj0U/HaKSYrbYVPZk0/8iI/i5XvYlUwgzAnAc30WbgfVupOAcX5MCiX4+Rv9NqYSAGHxscAAM9WfdtC8bw==", "pothole"=>{"streetAdress"=>"", "size"=>"2", "location"=>"2321", "district"=>"2312"}, "commit"=>"Create Pothole"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "potholes" ("streetAdress", "size", "location", "district", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["streetAdress", ""], ["size", 2], ["location", "2321"], ["district", "2312"], ["created_at", "2018-12-17 16:47:09.189794"], ["updated_at", "2018-12-17 16:47:09.189794"]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/potholes/2
+Completed 302 Found in 14ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/potholes/2" for 127.0.0.1 at 2018-12-17 08:47:09 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering potholes/show.html.erb within layouts/application
+  Rendered potholes/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 58ms (Views: 16.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/potholes/2" for 127.0.0.1 at 2018-12-17 08:47:41 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 7ms
+
+
+  
+ArgumentError (You need to supply at least one validation):
+  
+app/models/application_record.rb:3:in `<class:ApplicationRecord>'
+app/models/application_record.rb:1:in `<top (required)>'
+app/models/pothole.rb:1:in `<top (required)>'
+app/controllers/potholes_controller.rb:67:in `set_pothole'
+Started GET "/potholes/2" for 127.0.0.1 at 2018-12-17 08:47:53 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+SyntaxError (/home/rails/PHTRS/app/models/application_record.rb:3: syntax error, unexpected '=', expecting keyword_end
+	validates :streetadress = true
+	                         ^):
+  
+app/models/application_record.rb:3: syntax error, unexpected '=', expecting keyword_end
+app/models/pothole.rb:1:in `<top (required)>'
+app/controllers/potholes_controller.rb:67:in `set_pothole'
+Started GET "/potholes/2" for 127.0.0.1 at 2018-12-17 08:47:54 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 1ms
+
+
+  
+SyntaxError (/home/rails/PHTRS/app/models/application_record.rb:3: syntax error, unexpected '=', expecting keyword_end
+	validates :streetadress = true
+	                         ^):
+  
+app/models/application_record.rb:3: syntax error, unexpected '=', expecting keyword_end
+app/models/pothole.rb:1:in `<top (required)>'
+app/controllers/potholes_controller.rb:67:in `set_pothole'
+Started GET "/potholes/2" for 127.0.0.1 at 2018-12-17 08:48:01 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+ArgumentError (You need to supply at least one attribute):
+  
+app/models/application_record.rb:3:in `<class:ApplicationRecord>'
+app/models/application_record.rb:1:in `<top (required)>'
+app/models/pothole.rb:1:in `<top (required)>'
+app/controllers/potholes_controller.rb:67:in `set_pothole'
+Started GET "/potholes/2" for 127.0.0.1 at 2018-12-17 08:48:03 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+ArgumentError (You need to supply at least one attribute):
+  
+app/models/application_record.rb:3:in `<class:ApplicationRecord>'
+app/models/application_record.rb:1:in `<top (required)>'
+app/models/pothole.rb:1:in `<top (required)>'
+app/controllers/potholes_controller.rb:67:in `set_pothole'
+Started GET "/potholes/2" for 127.0.0.1 at 2018-12-17 08:48:03 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+ArgumentError (You need to supply at least one attribute):
+  
+app/models/application_record.rb:3:in `<class:ApplicationRecord>'
+app/models/application_record.rb:1:in `<top (required)>'
+app/models/pothole.rb:1:in `<top (required)>'
+app/controllers/potholes_controller.rb:67:in `set_pothole'
+Started GET "/potholes/2" for 127.0.0.1 at 2018-12-17 08:48:03 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+ArgumentError (You need to supply at least one attribute):
+  
+app/models/application_record.rb:3:in `<class:ApplicationRecord>'
+app/models/application_record.rb:1:in `<top (required)>'
+app/models/pothole.rb:1:in `<top (required)>'
+app/controllers/potholes_controller.rb:67:in `set_pothole'
+Started GET "/potholes/2" for 127.0.0.1 at 2018-12-17 08:48:03 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 29ms
+
+
+  
+ArgumentError (You need to supply at least one attribute):
+  
+app/models/application_record.rb:3:in `<class:ApplicationRecord>'
+app/models/application_record.rb:1:in `<top (required)>'
+app/models/pothole.rb:1:in `<top (required)>'
+app/controllers/potholes_controller.rb:67:in `set_pothole'
+Started GET "/potholes/2" for 127.0.0.1 at 2018-12-17 08:48:04 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 3ms
+
+
+  
+ArgumentError (You need to supply at least one attribute):
+  
+app/models/application_record.rb:3:in `<class:ApplicationRecord>'
+app/models/application_record.rb:1:in `<top (required)>'
+app/models/pothole.rb:1:in `<top (required)>'
+app/controllers/potholes_controller.rb:67:in `set_pothole'
+Started GET "/potholes/2" for 127.0.0.1 at 2018-12-17 08:48:04 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+ArgumentError (You need to supply at least one attribute):
+  
+app/models/application_record.rb:3:in `<class:ApplicationRecord>'
+app/models/application_record.rb:1:in `<top (required)>'
+app/models/pothole.rb:1:in `<top (required)>'
+app/controllers/potholes_controller.rb:67:in `set_pothole'
+Started GET "/potholes/2" for 127.0.0.1 at 2018-12-17 08:48:04 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+ArgumentError (You need to supply at least one attribute):
+  
+app/models/application_record.rb:3:in `<class:ApplicationRecord>'
+app/models/application_record.rb:1:in `<top (required)>'
+app/models/pothole.rb:1:in `<top (required)>'
+app/controllers/potholes_controller.rb:67:in `set_pothole'
+Started GET "/potholes/2" for 127.0.0.1 at 2018-12-17 08:48:04 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 17ms
+
+
+  
+ArgumentError (You need to supply at least one attribute):
+  
+app/models/application_record.rb:3:in `<class:ApplicationRecord>'
+app/models/application_record.rb:1:in `<top (required)>'
+app/models/pothole.rb:1:in `<top (required)>'
+app/controllers/potholes_controller.rb:67:in `set_pothole'
+Started GET "/potholes/2" for 127.0.0.1 at 2018-12-17 08:48:05 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+ArgumentError (You need to supply at least one attribute):
+  
+app/models/application_record.rb:3:in `<class:ApplicationRecord>'
+app/models/application_record.rb:1:in `<top (required)>'
+app/models/pothole.rb:1:in `<top (required)>'
+app/controllers/potholes_controller.rb:67:in `set_pothole'
+Started GET "/potholes/2" for 127.0.0.1 at 2018-12-17 08:48:41 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering potholes/show.html.erb within layouts/application
+  Rendered potholes/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 49ms (Views: 30.6ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-17 08:48:43 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.3ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/potholes/1" for 127.0.0.1 at 2018-12-17 08:48:47 -0800
+Processing by PotholesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SpyK32CUEvqoG8+gLHBkvESAgqhU+/6luwtFnRWF9ZmWatftNH7pcxOq8Nwguh59cdbn7mDkL0cqlmDpN0qRmw==", "id"=>"1"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "potholes" WHERE "potholes"."id" = ?[0m  [["id", 1]]
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/potholes
+Completed 302 Found in 16ms (ActiveRecord: 9.1ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-17 08:48:47 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 28ms (Views: 23.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/potholes/2" for 127.0.0.1 at 2018-12-17 08:48:49 -0800
+Processing by PotholesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mlXPhLrfKNY7eKMONfwjUPiBr7mR11ynsj8hTGj22ERGo5K27jXTX4DJnHI5NlmRzdfK/6XIjUUjogQ4Sjm8Rg==", "id"=>"2"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "potholes" WHERE "potholes"."id" = ?[0m  [["id", 2]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/potholes
+Completed 302 Found in 13ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-17 08:48:49 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (2.6ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 30ms (Views: 26.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-17 08:49:07 -0800
+Processing by PotholesController#index as HTML
+Completed 500 Internal Server Error in 7ms
+
+
+  
+ArgumentError (You need to supply at least one attribute):
+  
+app/models/application_record.rb:3:in `<class:ApplicationRecord>'
+app/models/application_record.rb:1:in `<top (required)>'
+app/models/pothole.rb:1:in `<top (required)>'
+app/controllers/potholes_controller.rb:7:in `index'
+Started GET "/potholes" for 127.0.0.1 at 2018-12-17 08:49:25 -0800
+Processing by PotholesController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+
+  
+ArgumentError (You need to supply at least one attribute):
+  
+app/models/pothole.rb:2:in `<class:Pothole>'
+app/models/pothole.rb:1:in `<top (required)>'
+app/controllers/potholes_controller.rb:7:in `index'
+Started GET "/potholes" for 127.0.0.1 at 2018-12-17 08:49:26 -0800
+Processing by PotholesController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+
+  
+ArgumentError (You need to supply at least one attribute):
+  
+app/models/pothole.rb:2:in `<class:Pothole>'
+app/models/pothole.rb:1:in `<top (required)>'
+app/controllers/potholes_controller.rb:7:in `index'
+Started GET "/potholes" for 127.0.0.1 at 2018-12-17 08:49:26 -0800
+Processing by PotholesController#index as HTML
+Completed 500 Internal Server Error in 27ms
+
+
+  
+ArgumentError (You need to supply at least one attribute):
+  
+app/models/pothole.rb:2:in `<class:Pothole>'
+app/models/pothole.rb:1:in `<top (required)>'
+app/controllers/potholes_controller.rb:7:in `index'
+Started GET "/potholes" for 127.0.0.1 at 2018-12-17 08:55:09 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 47ms (Views: 40.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-17 08:55:12 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (4.2ms)
+  Rendered potholes/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 46ms (Views: 31.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/potholes" for 127.0.0.1 at 2018-12-17 08:55:15 -0800
+Processing by PotholesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1uL/k2XqRkf+TrVDHYvWTyFSaIyYGj2jar5oQO55hwDFDXHs4m06QApLNb2EIRQhWAjyAxsO97v/wZ0TkWlIEg==", "pothole"=>{"streetAdress"=>"", "size"=>"", "location"=>"", "district"=>""}, "commit"=>"Create Pothole"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.1ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Pothole:0xb6156970>):
+  
+app/controllers/potholes_controller.rb:30:in `block in create'
+app/controllers/potholes_controller.rb:29:in `create'
+Started POST "/potholes" for 127.0.0.1 at 2018-12-17 08:56:09 -0800
+Processing by PotholesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1uL/k2XqRkf+TrVDHYvWTyFSaIyYGj2jar5oQO55hwDFDXHs4m06QApLNb2EIRQhWAjyAxsO97v/wZ0TkWlIEg==", "pothole"=>{"streetAdress"=>"", "size"=>"", "location"=>"", "district"=>""}, "commit"=>"Create Pothole"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 7.6ms)
+
+
+  
+NoMethodError (undefined method `streetadress' for #<Pothole:0xb42d8b10>
+Did you mean?  streetAdress
+               streetAdress?
+               streetAdress=):
+  
+app/controllers/potholes_controller.rb:30:in `block in create'
+app/controllers/potholes_controller.rb:29:in `create'
+Started GET "/" for 127.0.0.1 at 2018-12-17 08:56:14 -0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rails/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rails/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6.1/lib/rails/templates/rails/welcome/index.html.erb (4.7ms)
+Completed 200 OK in 9ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-17 08:56:21 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-17 08:56:23 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (8.0ms)
+  Rendered potholes/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/potholes" for 127.0.0.1 at 2018-12-17 08:56:29 -0800
+Processing by PotholesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rjg7fnGiG+Lb1KqogRiCHkHcHQjrNgR9bun1QWvE8hG917UB9iVn5S/RKlYYskBwOIaHh2gizmX7lgASFNQ9Aw==", "pothole"=>{"streetAdress"=>"12", "size"=>"2", "location"=>"32", "district"=>"213"}, "commit"=>"Create Pothole"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.1ms)
+
+
+  
+NoMethodError (undefined method `streetadress' for #<Pothole:0xb3d356a4>
+Did you mean?  streetAdress
+               streetAdress?
+               streetAdress=):
+  
+app/controllers/potholes_controller.rb:30:in `block in create'
+app/controllers/potholes_controller.rb:29:in `create'
+Started POST "/potholes" for 127.0.0.1 at 2018-12-17 08:56:51 -0800
+Processing by PotholesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rjg7fnGiG+Lb1KqogRiCHkHcHQjrNgR9bun1QWvE8hG917UB9iVn5S/RKlYYskBwOIaHh2gizmX7lgASFNQ9Aw==", "pothole"=>{"streetAdress"=>"12", "size"=>"2", "location"=>"32", "district"=>"213"}, "commit"=>"Create Pothole"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "potholes" ("streetAdress", "size", "location", "district", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["streetAdress", "12"], ["size", 2], ["location", "32"], ["district", "213"], ["created_at", "2018-12-17 16:56:51.635786"], ["updated_at", "2018-12-17 16:56:51.635786"]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/potholes/3
+Completed 302 Found in 43ms (ActiveRecord: 13.1ms)
+
+
+Started GET "/potholes/3" for 127.0.0.1 at 2018-12-17 08:56:51 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering potholes/show.html.erb within layouts/application
+  Rendered potholes/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 49ms (Views: 46.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-17 08:56:54 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-17 09:00:14 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 53ms (Views: 49.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-17 09:00:15 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (6.7ms)
+  Rendered potholes/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/potholes" for 127.0.0.1 at 2018-12-17 09:00:22 -0800
+Processing by PotholesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wENV1lCjxCeIsdul9Ta39kvndZipngYsPuSOhzNfF4DTrNup1yS4IHy0W1tsnHWYMr3vFyqKzDSrm3vUTE/Ykg==", "pothole"=>{"streetAdress"=>"qw", "size"=>"13", "location"=>"ed", "district"=>"ew"}, "commit"=>"Create Pothole"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.1ms)
+
+
+  
+NoMethodError (undefined method `graduate' for #<Pothole:0xb552ae8>):
+  
+app/controllers/potholes_controller.rb:30:in `block in create'
+app/controllers/potholes_controller.rb:29:in `create'
+Started POST "/potholes" for 127.0.0.1 at 2018-12-17 09:00:41 -0800
+Processing by PotholesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wENV1lCjxCeIsdul9Ta39kvndZipngYsPuSOhzNfF4DTrNup1yS4IHy0W1tsnHWYMr3vFyqKzDSrm3vUTE/Ykg==", "pothole"=>{"streetAdress"=>"qw", "size"=>"13", "location"=>"ed", "district"=>"ew"}, "commit"=>"Create Pothole"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+SyntaxError (/home/rails/PHTRS/app/models/pothole.rb:4: syntax error, unexpected ':', expecting '}'
+:size, :graduate{greater_than: 0,less_than_or_equal_to:10}
+                              ^):
+  
+app/models/pothole.rb:4: syntax error, unexpected ':', expecting '}'
+app/controllers/potholes_controller.rb:27:in `create'
+Started POST "/potholes" for 127.0.0.1 at 2018-12-17 09:02:12 -0800
+Processing by PotholesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wENV1lCjxCeIsdul9Ta39kvndZipngYsPuSOhzNfF4DTrNup1yS4IHy0W1tsnHWYMr3vFyqKzDSrm3vUTE/Ykg==", "pothole"=>{"streetAdress"=>"qw", "size"=>"13", "location"=>"ed", "district"=>"ew"}, "commit"=>"Create Pothole"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (6.2ms)
+  Rendered potholes/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 98ms (Views: 43.0ms | ActiveRecord: 15.7ms)
+
+
+Started POST "/potholes" for 127.0.0.1 at 2018-12-17 09:02:18 -0800
+Processing by PotholesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3+U8iYyrfqo303pbesJgyCxoRdpAuuZpheA1lvrwqQADE2G72EGFI4xiRSd2CBoJGT4gnHSlN4sUfRDi2D/NAg==", "pothole"=>{"streetAdress"=>"qw", "size"=>"12", "location"=>"ed", "district"=>"ew"}, "commit"=>"Create Pothole"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (9.4ms)
+  Rendered potholes/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 47ms (Views: 42.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/potholes" for 127.0.0.1 at 2018-12-17 09:02:23 -0800
+Processing by PotholesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1FYrMHucCHjxlcCP5G7cVIz+NV83a4Xmymoe1uH48BgIoHYCL3bz8Uok//PopKaVuahQGQN0VARb9zuiwzeUGg==", "pothole"=>{"streetAdress"=>"", "size"=>"5", "location"=>"ed", "district"=>"ew"}, "commit"=>"Create Pothole"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (7.5ms)
+  Rendered potholes/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 39ms (Views: 34.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/potholes" for 127.0.0.1 at 2018-12-17 09:02:26 -0800
+Processing by PotholesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+Lck+3gq9DOqJfr9d+i9iosrJGXngfy+WBBoRlI8aCUkQXnJLMAPuhGUxYF7IsdLvn1BI9OeLVzJjU0ycPMMJw==", "pothole"=>{"streetAdress"=>"32", "size"=>"5", "location"=>"ed", "district"=>"ew"}, "commit"=>"Create Pothole"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.6ms)[0m  [1m[32mINSERT INTO "potholes" ("streetAdress", "size", "location", "district", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["streetAdress", "32"], ["size", 5], ["location", "ed"], ["district", "ew"], ["created_at", "2018-12-17 17:02:26.074782"], ["updated_at", "2018-12-17 17:02:26.074782"]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/potholes/4
+Completed 302 Found in 14ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/potholes/4" for 127.0.0.1 at 2018-12-17 09:02:26 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering potholes/show.html.erb within layouts/application
+  Rendered potholes/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/potholes/4" for 127.0.0.1 at 2018-12-17 09:02:59 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering potholes/show.html.erb within layouts/application
+  Rendered potholes/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 36ms (Views: 18.6ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-17 09:03:03 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-17 09:03:04 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (3.2ms)
+  Rendered potholes/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/potholes" for 127.0.0.1 at 2018-12-17 09:03:17 -0800
+Processing by PotholesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PovofPV9qsFL7EQpD0psqfG5C9ICT7Het0JfSyAv8/wtZGYDcvrWxr/pxNeW4K7HiOORXYFbe8YiPaoYXz887g==", "pothole"=>{"streetAdress"=>"12", "size"=>"1", "location"=>"", "district"=>""}, "commit"=>"Create Pothole"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (7.4ms)
+  Rendered potholes/new.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 45ms (Views: 38.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/potholes" for 127.0.0.1 at 2018-12-17 09:03:20 -0800
+Processing by PotholesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SvRM3cdnjugx22TRx/it4xsQV6yNrkb8X2wY+H8t1ceWAhHvk411YYpqW63LMtciLkYy6rmxlx7O8T2MXeKxxQ==", "pothole"=>{"streetAdress"=>"12", "size"=>"1", "location"=>"32", "district"=>""}, "commit"=>"Create Pothole"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (9.3ms)
+  Rendered potholes/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 43ms (Views: 38.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/potholes" for 127.0.0.1 at 2018-12-17 09:03:22 -0800
+Processing by PotholesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FmmRzTNaqe5ZxuMwXO5UKdzNTeu/z7BBF5xWbWxX5ePKn8z/Z7BSZ+J33ExQJC7o6ZsorYvQYaOGAXMZTpiB4Q==", "pothole"=>{"streetAdress"=>"12", "size"=>"1", "location"=>"32", "district"=>"21"}, "commit"=>"Create Pothole"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "potholes" ("streetAdress", "size", "location", "district", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["streetAdress", "12"], ["size", 1], ["location", "32"], ["district", "21"], ["created_at", "2018-12-17 17:03:22.312349"], ["updated_at", "2018-12-17 17:03:22.312349"]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/potholes/5
+Completed 302 Found in 14ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/potholes/5" for 127.0.0.1 at 2018-12-17 09:03:22 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering potholes/show.html.erb within layouts/application
+  Rendered potholes/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-17 09:03:23 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/potholes/4/edit" for 127.0.0.1 at 2018-12-17 09:03:31 -0800
+Processing by PotholesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering potholes/edit.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (9.4ms)
+  Rendered potholes/edit.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 43ms (Views: 40.7ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/potholes/4" for 127.0.0.1 at 2018-12-17 09:03:36 -0800
+Processing by PotholesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x8Ks4qCHvkFYGU3NFju15pGI2QLt/Kg3RfWZbXaKzK7DbD/dpYAerPvPmvnWyRjffX1xJvgfBwAO3T7HWuRRDw==", "pothole"=>{"streetAdress"=>"32", "size"=>"5", "location"=>"", "district"=>"ew"}, "commit"=>"Update Pothole", "id"=>"4"}
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering potholes/edit.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (7.3ms)
+  Rendered potholes/edit.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 38ms (Views: 33.7ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/potholes/4" for 127.0.0.1 at 2018-12-17 09:03:38 -0800
+Processing by PotholesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uvpFJCmc8uGEulkaQmiMU9IE7VLky8egRbyj40USq6hmDBgWfXYJaD8LZmZOovaS51KIFNDUFkLUIYaXZ93Pqg==", "pothole"=>{"streetAdress"=>"32", "size"=>"5", "location"=>"wer", "district"=>"ew"}, "commit"=>"Update Pothole", "id"=>"4"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.1ms)[0m  [1m[33mUPDATE "potholes" SET "location" = ?, "updated_at" = ? WHERE "potholes"."id" = ?[0m  [["location", "wer"], ["updated_at", "2018-12-17 17:03:38.757505"], ["id", 4]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/potholes/4
+Completed 302 Found in 16ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/potholes/4" for 127.0.0.1 at 2018-12-17 09:03:38 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering potholes/show.html.erb within layouts/application
+  Rendered potholes/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-17 09:03:52 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 48ms (Views: 46.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/potholes/3" for 127.0.0.1 at 2018-12-17 09:03:55 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering potholes/show.html.erb within layouts/application
+  Rendered potholes/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-17 09:04:00 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (1.8ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/potholes/3/edit" for 127.0.0.1 at 2018-12-17 09:04:02 -0800
+Processing by PotholesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering potholes/edit.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (5.4ms)
+  Rendered potholes/edit.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 41ms (Views: 39.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/potholes/3" for 127.0.0.1 at 2018-12-17 09:04:05 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering potholes/show.html.erb within layouts/application
+  Rendered potholes/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 43ms (Views: 38.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/potholes/3" for 127.0.0.1 at 2018-12-17 09:05:19 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering potholes/show.html.erb within layouts/application
+  Rendered potholes/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/potholes/3/edit" for 127.0.0.1 at 2018-12-17 09:05:28 -0800
+Processing by PotholesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering potholes/edit.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (7.9ms)
+  Rendered potholes/edit.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 50ms (Views: 48.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/potholes/3" for 127.0.0.1 at 2018-12-17 09:05:30 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering potholes/show.html.erb within layouts/application
+  Rendered potholes/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 45ms (Views: 43.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-17 09:05:31 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-17 09:06:38 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.2ms)
+
+

@@ -20,10 +20,5 @@
   <%= @pothole.district %>
 </p>
 
-<p>
-  <strong>RepairPriority:</strong>
-  <%= 10-@pothole.size %>
-</p>
-
 <%= link_to 'Edit', edit_pothole_path(@pothole) %> |
 <%= link_to 'Back', potholes_path %>
