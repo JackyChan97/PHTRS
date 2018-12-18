@@ -1,0 +1,8 @@
+<h1>Picture#show</h1>
+<p>Find me in app/views/picture/show.html.erb</p>
+
+
+<%= form_tag '/picture/mystore', :multipart => true do%>
+    <%= file_field_tag :localfile %>
+    <%= submit_tag "上传"%>
+<% end %>

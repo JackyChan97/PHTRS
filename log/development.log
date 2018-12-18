@@ -1622,3 +1622,741 @@ Processing by PotholesController#index as HTML
 Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-12-18 07:34:11 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rails/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rails/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6.1/lib/rails/templates/rails/welcome/index.html.erb (6.5ms)
+Completed 200 OK in 38ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ph" for 127.0.0.1 at 2018-12-18 07:34:24 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/ph"):
+  
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/pothole" for 127.0.0.1 at 2018-12-18 07:34:36 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/pothole"):
+  
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/potholes" for 127.0.0.1 at 2018-12-18 07:34:47 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 886ms (Views: 801.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-18 07:34:55 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (55.0ms)
+  Rendered potholes/new.html.erb within layouts/application (64.5ms)
+Completed 200 OK in 126ms (Views: 75.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/potholes" for 127.0.0.1 at 2018-12-18 07:35:06 -0800
+Processing by PotholesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TbBEZQVaDZUNn2LPkd/9lcNuT2lwGi4Db3SK4SuAmVE0tgX1qfeyRvSf3fs+Wj2kHZmrJarapKm9/2Qifg10nQ==", "pothole"=>{"streetAdress"=>"xzxz", "size"=>"12", "location"=>"zx", "district"=>"xxx"}, "commit"=>"Create Pothole"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (2.9ms)
+  Rendered potholes/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/potholes" for 127.0.0.1 at 2018-12-18 07:35:09 -0800
+Processing by PotholesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eCbtPX+4NBJgH4GzNoBnjmWzF87QwsO1UfyNIwj32KB4qIXT7bggjqi7U8ywFws2w7yvvk8qj31KzOABnHzvJQ==", "pothole"=>{"streetAdress"=>"xzxz", "size"=>"10", "location"=>"zx", "district"=>"xxx"}, "commit"=>"Create Pothole"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "potholes" ("streetAdress", "size", "location", "district", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["streetAdress", "xzxz"], ["size", 10], ["location", "zx"], ["district", "xxx"], ["created_at", "2018-12-18 15:35:09.808321"], ["updated_at", "2018-12-18 15:35:09.808321"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/potholes/6
+Completed 302 Found in 6ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/potholes/6" for 127.0.0.1 at 2018-12-18 07:35:09 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering potholes/show.html.erb within layouts/application
+  Rendered potholes/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 39ms (Views: 26.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-18 07:35:11 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/potholes/3" for 127.0.0.1 at 2018-12-18 07:42:05 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPothole Load (2.6ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering potholes/show.html.erb within layouts/application
+  Rendered potholes/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 354ms (Views: 338.8ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/potholes/3" for 127.0.0.1 at 2018-12-18 07:42:05 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering potholes/show.html.erb within layouts/application
+  Rendered potholes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-18 07:42:10 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 39ms (Views: 38.4ms | ActiveRecord: 0.1ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePictures (20181218154244)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "pictures" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "path" varchar, "pothole_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181218154244"]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/potholes" for 127.0.0.1 at 2018-12-18 07:53:51 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 208ms (Views: 32.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 07:53:53 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  Rendering picture/show.html.erb within layouts/application
+  Rendered picture/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/picture?pothole_id=4" for 127.0.0.1 at 2018-12-18 07:54:14 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"4"}
+  Rendering picture/show.html.erb within layouts/application
+  Rendered picture/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 35ms (Views: 34.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 07:54:21 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  Rendering picture/show.html.erb within layouts/application
+  Rendered picture/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/picture?pothole_id=6" for 127.0.0.1 at 2018-12-18 07:54:25 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"6"}
+  Rendering picture/show.html.erb within layouts/application
+  Rendered picture/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 38ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-18 07:58:59 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 07:59:00 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  Rendering picture/show.html.erb within layouts/application
+  Rendered picture/show.html.erb within layouts/application (232.1ms)
+Completed 500 Internal Server Error in 234ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `mystore' for #<#<Class:0xb4f81380>:0xb4f67534>):
+    2: <p>Find me in app/views/picture/show.html.erb</p>
+    3: 
+    4: 
+    5: <%= form_tag mystore, :multipart => true do%>
+    6:     <%= file_field_tag :localfile %>
+    7:     <%= submit_tag "上传"%>
+    8: <% end %>
+  
+app/views/picture/show.html.erb:5:in `_app_views_picture_show_html_erb___519802358__629374598'
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 07:59:52 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  Rendering picture/show.html.erb within layouts/application
+  Rendered picture/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/picture/mystore" for 127.0.0.1 at 2018-12-18 07:59:56 -0800
+Processing by PictureController#mystore as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wh9SY+mOkkTszKVIsAs/MIA2u+0Y3Yv5mmDmiuq5z49akTqNe46G2CRodzc2nFOIJjkDnYc1xzGBUIuofjL4Cg==", "localfile"=>#<ActionDispatch::Http::UploadedFile:0xa85f610 @tempfile=#<Tempfile:/tmp/RackMultipart20181218-2883-115maqd.png>, @original_filename="屏幕截图(1).png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"localfile\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE(1).png\"\r\nContent-Type: image/png\r\n">, "commit"=>"上传"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant PictureController::MyuploaderUploader):
+  
+app/controllers/picture_controller.rb:6:in `mystore'
+Started POST "/picture/mystore" for 127.0.0.1 at 2018-12-18 08:02:49 -0800
+Processing by PictureController#mystore as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wh9SY+mOkkTszKVIsAs/MIA2u+0Y3Yv5mmDmiuq5z49akTqNe46G2CRodzc2nFOIJjkDnYc1xzGBUIuofjL4Cg==", "localfile"=>#<ActionDispatch::Http::UploadedFile:0x9c485e8 @tempfile=#<Tempfile:/tmp/RackMultipart20181218-2883-1dv5d0b.png>, @original_filename="屏幕截图(1).png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"localfile\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE(1).png\"\r\nContent-Type: image/png\r\n">, "commit"=>"上传"}
+Completed 500 Internal Server Error in 1ms
+
+
+  
+NameError (uninitialized constant PictureController::MyuploaderUploader):
+  
+app/controllers/picture_controller.rb:6:in `mystore'
+Started GET "/potholes" for 127.0.0.1 at 2018-12-18 08:02:51 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 41ms (Views: 38.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/picture?pothole_id=5" for 127.0.0.1 at 2018-12-18 08:02:53 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"5"}
+  Rendering picture/show.html.erb within layouts/application
+  Rendered picture/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 50ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/picture/mystore" for 127.0.0.1 at 2018-12-18 08:02:57 -0800
+Processing by PictureController#mystore as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4dl9Ix4mJLJgtfecfcaNVI3nBCSk5WXIiuNUOd7QrzE+1aM/+I799pqvE2DTHMCvFOx327GAtl31joiBs4e1Rw==", "localfile"=>#<ActionDispatch::Http::UploadedFile:0x9f56924 @tempfile=#<Tempfile:/tmp/RackMultipart20181218-2883-1h2w3zv.png>, @original_filename="屏幕截图(1).png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"localfile\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE(1).png\"\r\nContent-Type: image/png\r\n">, "commit"=>"上传"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant PictureController::MyuploaderUploader):
+  
+app/controllers/picture_controller.rb:6:in `mystore'
+Started GET "/" for 127.0.0.1 at 2018-12-18 08:06:12 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rails/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rails/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6.1/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 18ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-18 08:06:14 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (6.0ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 222ms (Views: 211.8ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 08:06:16 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  Rendering picture/show.html.erb within layouts/application
+  Rendered picture/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/picture/mystore" for 127.0.0.1 at 2018-12-18 08:06:19 -0800
+Processing by PictureController#mystore as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2QuBLQQsOol0yMU4V9fyu6IPhrLxqFScFQM91e3ZDFTlz6eyqacFNvDVTYiNg7ZOpy0z4c9dsZ3mM6H3pxaSZA==", "localfile"=>#<ActionDispatch::Http::UploadedFile:0xb50726e0 @tempfile=#<Tempfile:/tmp/RackMultipart20181218-3842-10n8tn1.png>, @original_filename="屏幕截图(1).png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"localfile\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE(1).png\"\r\nContent-Type: image/png\r\n">, "commit"=>"上传"}
+No template found for PictureController#mystore, rendering head :no_content
+Completed 204 No Content in 25ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 08:08:24 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  Rendering picture/show.html.erb within layouts/application
+  Rendered picture/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 28ms (Views: 27.0ms)
+
+
+Started POST "/picture/mystore" for 127.0.0.1 at 2018-12-18 08:08:27 -0800
+Processing by PictureController#mystore as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QP+X7xPFpD0quILKda4XLo8bTuEFF41UQKb6pUitKC98O7Fwvk6bgq6lCnqv+lPbijn7sjviaFWzlmaHAmK2Hw==", "localfile"=>#<ActionDispatch::Http::UploadedFile:0xb36597a4 @tempfile=#<Tempfile:/tmp/RackMultipart20181218-3842-xfqx4g.png>, @original_filename="屏幕截图(1).png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"localfile\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE(1).png\"\r\nContent-Type: image/png\r\n">, "commit"=>"上传"}
+Completed 500 Internal Server Error in 9ms
+
+
+  
+NameError (undefined local variable or method `pothole_id' for #<MyuploaderUploader:0xb376b69c>):
+  
+app/uploaders/myuploader_uploader.rb:13:in `store_dir'
+app/controllers/picture_controller.rb:7:in `mystore'
+Started POST "/picture/mystore" for 127.0.0.1 at 2018-12-18 08:12:22 -0800
+Processing by PictureController#mystore as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QP+X7xPFpD0quILKda4XLo8bTuEFF41UQKb6pUitKC98O7Fwvk6bgq6lCnqv+lPbijn7sjviaFWzlmaHAmK2Hw==", "localfile"=>#<ActionDispatch::Http::UploadedFile:0xb3037484 @tempfile=#<Tempfile:/tmp/RackMultipart20181218-3842-8x868i.png>, @original_filename="屏幕截图(1).png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"localfile\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE(1).png\"\r\nContent-Type: image/png\r\n">, "commit"=>"上传"}
+Completed 500 Internal Server Error in 11ms
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/uploaders/myuploader_uploader.rb:12:in `store_dir'
+app/controllers/picture_controller.rb:8:in `mystore'
+Started GET "/" for 127.0.0.1 at 2018-12-18 08:13:33 -0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rails/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rails/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6.1/lib/rails/templates/rails/welcome/index.html.erb (3.2ms)
+Completed 200 OK in 5ms (Views: 3.9ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-18 08:13:40 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 45ms (Views: 42.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 08:13:41 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  Rendering picture/show.html.erb within layouts/application
+  Rendered picture/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/picture/mystore" for 127.0.0.1 at 2018-12-18 08:13:45 -0800
+Processing by PictureController#mystore as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NHIhz4Bqw7lspNtQJqNuBjmAQ0Z1J+JHyYvkKVQX0y0ItgdQLeH8Bui5U+D89yrzPKL2FUvSB0Y6u3gLHthNHQ==", "localfile"=>#<ActionDispatch::Http::UploadedFile:0xb2e2040c @tempfile=#<Tempfile:/tmp/RackMultipart20181218-3842-uhzuwi.png>, @original_filename="屏幕截图(1).png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"localfile\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE(1).png\"\r\nContent-Type: image/png\r\n">, "commit"=>"上传"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/uploaders/myuploader_uploader.rb:12:in `store_dir'
+app/controllers/picture_controller.rb:8:in `mystore'
+Started POST "/picture/mystore" for 127.0.0.1 at 2018-12-18 08:15:11 -0800
+Processing by PictureController#mystore as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NHIhz4Bqw7lspNtQJqNuBjmAQ0Z1J+JHyYvkKVQX0y0ItgdQLeH8Bui5U+D89yrzPKL2FUvSB0Y6u3gLHthNHQ==", "localfile"=>#<ActionDispatch::Http::UploadedFile:0xb37a6814 @tempfile=#<Tempfile:/tmp/RackMultipart20181218-3842-2hrm1r.png>, @original_filename="屏幕截图(1).png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"localfile\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE(1).png\"\r\nContent-Type: image/png\r\n">, "commit"=>"上传"}
+Completed 500 Internal Server Error in 3ms
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/uploaders/myuploader_uploader.rb:12:in `store_dir'
+app/controllers/picture_controller.rb:7:in `mystore'
+Started POST "/picture/mystore" for 127.0.0.1 at 2018-12-18 08:16:28 -0800
+Processing by PictureController#mystore as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NHIhz4Bqw7lspNtQJqNuBjmAQ0Z1J+JHyYvkKVQX0y0ItgdQLeH8Bui5U+D89yrzPKL2FUvSB0Y6u3gLHthNHQ==", "localfile"=>#<ActionDispatch::Http::UploadedFile:0xb3f42a00 @tempfile=#<Tempfile:/tmp/RackMultipart20181218-3842-rgilmb.png>, @original_filename="屏幕截图(1).png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"localfile\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE(1).png\"\r\nContent-Type: image/png\r\n">, "commit"=>"上传"}
+No template found for PictureController#mystore, rendering head :no_content
+Completed 204 No Content in 24ms
+
+
+Started POST "/picture/mystore" for 127.0.0.1 at 2018-12-18 08:16:31 -0800
+Processing by PictureController#mystore as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NHIhz4Bqw7lspNtQJqNuBjmAQ0Z1J+JHyYvkKVQX0y0ItgdQLeH8Bui5U+D89yrzPKL2FUvSB0Y6u3gLHthNHQ==", "localfile"=>#<ActionDispatch::Http::UploadedFile:0xb3ea93a0 @tempfile=#<Tempfile:/tmp/RackMultipart20181218-3842-1n3nlw9.png>, @original_filename="屏幕截图(1).png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"localfile\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE(1).png\"\r\nContent-Type: image/png\r\n">, "commit"=>"上传"}
+No template found for PictureController#mystore, rendering head :no_content
+Completed 204 No Content in 47ms
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-18 08:16:37 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 40ms (Views: 37.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 08:16:38 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  Rendering picture/show.html.erb within layouts/application
+  Rendered picture/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/picture/mystore" for 127.0.0.1 at 2018-12-18 08:16:41 -0800
+Processing by PictureController#mystore as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XfQKLRwgi9w9QpYWdJvc0s+m9PagboDZP4IOqo5HCOZhMCyysau0Y7lfHqauz5gnyoRBpZ6bZdjMspKIxIiW1g==", "localfile"=>#<ActionDispatch::Http::UploadedFile:0xb4a48c10 @tempfile=#<Tempfile:/tmp/RackMultipart20181218-3842-ne0wf1.png>, @original_filename="屏幕截图(1).png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"localfile\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE(1).png\"\r\nContent-Type: image/png\r\n">, "commit"=>"上传"}
+No template found for PictureController#mystore, rendering head :no_content
+Completed 204 No Content in 29ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-18 08:17:30 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 35ms (Views: 27.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 08:17:32 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  Rendering picture/show.html.erb within layouts/application
+  Rendered picture/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/picture/mystore" for 127.0.0.1 at 2018-12-18 08:17:36 -0800
+Processing by PictureController#mystore as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zQapcX0Hi33p00osuFcVqDl8ObD853hJ5j6lzKNADp3xwo/u0Iy0wm3OwpxiA1FdPF6M48ISnUgVDjnu6Y+QrQ==", "localfile"=>#<ActionDispatch::Http::UploadedFile:0xb3120bfc @tempfile=#<Tempfile:/tmp/RackMultipart20181218-3842-vw4jbr.png>, @original_filename="屏幕截图(1).png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"localfile\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE(1).png\"\r\nContent-Type: image/png\r\n">, "commit"=>"上传"}
+No template found for PictureController#mystore, rendering head :no_content
+Completed 204 No Content in 24ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-18 08:18:12 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 08:18:14 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  Rendering picture/show.html.erb within layouts/application
+  Rendered picture/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/picture/mystore" for 127.0.0.1 at 2018-12-18 08:18:17 -0800
+Processing by PictureController#mystore as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MHaJlioDFMKbQiuAxw/7HWkAOE8LpbiJ7m7AbMGkdqEMsq8Jh4grfR9fozAdW7/obCKNHDVQXYgdXlxOi2vokQ==", "localfile"=>#<ActionDispatch::Http::UploadedFile:0xb3404fd0 @tempfile=#<Tempfile:/tmp/RackMultipart20181218-3842-1obnfsj.png>, @original_filename="屏幕截图(1).png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"localfile\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE(1).png\"\r\nContent-Type: image/png\r\n">, "commit"=>"上传"}
+No template found for PictureController#mystore, rendering head :no_content
+Completed 204 No Content in 22ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 08:18:44 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  Rendering picture/show.html.erb within layouts/application
+  Rendered picture/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 39ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/picture/mystore" for 127.0.0.1 at 2018-12-18 08:18:48 -0800
+Processing by PictureController#mystore as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RSmVL8KqjWNmYHVjuuIxmHGodU/LrjejiAA6RajDGNh57bOwbyGy3OJ9/dNgtnVtdIrAHPVb0qJ7MKZn4gyG6A==", "localfile"=>#<ActionDispatch::Http::UploadedFile:0xb4dc6928 @tempfile=#<Tempfile:/tmp/RackMultipart20181218-3842-6qmp31.png>, @original_filename="屏幕截图(1).png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"localfile\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE(1).png\"\r\nContent-Type: image/png\r\n">, "commit"=>"上传"}
+No template found for PictureController#mystore, rendering head :no_content
+Completed 204 No Content in 19ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 08:20:04 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  Rendering picture/show.html.erb within layouts/application
+  Rendered picture/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 26ms (Views: 25.7ms)
+
+
+Started POST "/picture/mystore" for 127.0.0.1 at 2018-12-18 08:20:08 -0800
+Processing by PictureController#mystore as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hRhwgw457JPCmcdxD5uMyF3Jpabc9igPUnHQ9snYH7253FYco7LTLEaET8HVz8g9WOsQ9eIDzQ6hQUzUgxeBjQ==", "localfile"=>#<ActionDispatch::Http::UploadedFile:0xbb05030 @tempfile=#<Tempfile:/tmp/RackMultipart20181218-3842-1uf16cv.png>, @original_filename="屏幕截图(1).png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"localfile\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE(1).png\"\r\nContent-Type: image/png\r\n">, "commit"=>"上传"}
+Completed 500 Internal Server Error in 1ms
+
+
+  
+SyntaxError (/home/rails/PHTRS/app/uploaders/myuploader_uploader.rb:13: syntax error, unexpected tSTRING_DEND, expecting '='
+rscore}/#{mounted_as}/#{*args}"
+                              ^
+/home/rails/PHTRS/app/uploaders/myuploader_uploader.rb:19: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+e.helpers.asset_path("fallback/" + [version_name, "default.p
+                              ^
+/home/rails/PHTRS/app/uploaders/myuploader_uploader.rb:19: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+ck/" + [version_name, "default.png"].compact.join('_'))
+                              ^
+/home/rails/PHTRS/app/uploaders/myuploader_uploader.rb:21: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+ck/" + [version_name, "default.png"].compact.join('_')
+                              ^
+/home/rails/PHTRS/app/uploaders/myuploader_uploader.rb:45: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+  #   "something.jpg" if original_filename
+                ^
+/home/rails/PHTRS/app/uploaders/myuploader_uploader.rb:45: unterminated string meets end of file
+/home/rails/PHTRS/app/uploaders/myuploader_uploader.rb:45: syntax error, unexpected end-of-input, expecting tSTRING_DEND):
+  
+app/uploaders/myuploader_uploader.rb:13: syntax error, unexpected tSTRING_DEND, expecting '='
+app/uploaders/myuploader_uploader.rb:19: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/uploaders/myuploader_uploader.rb:19: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/uploaders/myuploader_uploader.rb:21: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/uploaders/myuploader_uploader.rb:45: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/uploaders/myuploader_uploader.rb:45: unterminated string meets end of file
+app/uploaders/myuploader_uploader.rb:45: syntax error, unexpected end-of-input, expecting tSTRING_DEND
+app/controllers/picture_controller.rb:6:in `mystore'
+Started GET "/potholes" for 127.0.0.1 at 2018-12-18 08:20:51 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 33ms (Views: 30.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 08:20:52 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  Rendering picture/show.html.erb within layouts/application
+  Rendered picture/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/picture/mystore" for 127.0.0.1 at 2018-12-18 08:20:55 -0800
+Processing by PictureController#mystore as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PDmtDNgNzOqbV+ngCf0bZCigtRoiPpInuSnoq5WY2bEA/YuTdYbzVR9KYVDTqV+RLYIASRzLdyZKGXSJ31dHgQ==", "localfile"=>#<ActionDispatch::Http::UploadedFile:0xb32203cc @tempfile=#<Tempfile:/tmp/RackMultipart20181218-3842-1iz42an.png>, @original_filename="屏幕截图(1).png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"localfile\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE(1).png\"\r\nContent-Type: image/png\r\n">, "commit"=>"上传"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/uploaders/myuploader_uploader.rb:12:in `store_dir'
+app/controllers/picture_controller.rb:8:in `mystore'
+Started POST "/picture/mystore" for 127.0.0.1 at 2018-12-18 08:21:35 -0800
+Processing by PictureController#mystore as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PDmtDNgNzOqbV+ngCf0bZCigtRoiPpInuSnoq5WY2bEA/YuTdYbzVR9KYVDTqV+RLYIASRzLdyZKGXSJ31dHgQ==", "localfile"=>#<ActionDispatch::Http::UploadedFile:0xbaa5540 @tempfile=#<Tempfile:/tmp/RackMultipart20181218-3842-1t4sbd4.png>, @original_filename="屏幕截图(1).png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"localfile\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE(1).png\"\r\nContent-Type: image/png\r\n">, "commit"=>"上传"}
+No template found for PictureController#mystore, rendering head :no_content
+Completed 204 No Content in 19ms
+
+
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 08:22:18 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  Rendering picture/show.html.erb within layouts/application
+  Rendered picture/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 28ms (Views: 26.6ms)
+
+
+Started POST "/picture/mystore" for 127.0.0.1 at 2018-12-18 08:22:22 -0800
+Processing by PictureController#mystore as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QRDK+Kh/bWmDJX20Lw9r02FiLeRZedPfYNrAGTSVFWp91OxnBfRS1gc49QT1Wy8mZECYt2eMNt6T6lw7flqLWg==", "localfile"=>#<ActionDispatch::Http::UploadedFile:0xb417b86c @tempfile=#<Tempfile:/tmp/RackMultipart20181218-3842-1sbsyke.png>, @original_filename="屏幕截图(1).png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"localfile\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE(1).png\"\r\nContent-Type: image/png\r\n">, "commit"=>"上传"}
+No template found for PictureController#mystore, rendering head :no_content
+Completed 204 No Content in 20ms
+
+
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 08:23:02 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  Rendering picture/show.html.erb within layouts/application
+  Rendered picture/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 27ms (Views: 26.0ms)
+
+
+Started POST "/picture/mystore" for 127.0.0.1 at 2018-12-18 08:23:06 -0800
+Processing by PictureController#mystore as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rJpcwKaqKmsuyunxrZf4vnCGQY+hGoFe3YYR8g3Uon+QXnpfCyEV1KrXYUF3w7xLdaT03J/vZF8uto3QRxs8Tw==", "localfile"=>#<ActionDispatch::Http::UploadedFile:0xb47389f8 @tempfile=#<Tempfile:/tmp/RackMultipart20181218-3842-namdpp.png>, @original_filename="屏幕截图(1).png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"localfile\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE(1).png\"\r\nContent-Type: image/png\r\n">, "commit"=>"上传"}
+No template found for PictureController#mystore, rendering head :no_content
+Completed 204 No Content in 120ms
+
+
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 08:24:39 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  Rendering picture/show.html.erb within layouts/application
+  Rendered picture/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 21.6ms)
+
+
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 08:24:39 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  Rendering picture/show.html.erb within layouts/application
+  Rendered picture/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 35ms (Views: 34.4ms)
+
+
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 08:24:39 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  Rendering picture/show.html.erb within layouts/application
+  Rendered picture/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 18ms (Views: 17.1ms)
+
+
+Started POST "/picture/mystore" for 127.0.0.1 at 2018-12-18 08:24:57 -0800
+Processing by PictureController#mystore as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZYfPdzYw+jNyC/Rlu0FFtjxugXvlN/9wAv8wQdu9eQVdpRUGxZ+JiVA7e+Hk4XArkVkv/LvKryFpLGnKxweB0A==", "localfile"=>#<ActionDispatch::Http::UploadedFile:0xb37adf74 @tempfile=#<Tempfile:/tmp/RackMultipart20181218-3842-1mjnqm8.png>, @original_filename="屏幕截图(1).png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"localfile\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE(1).png\"\r\nContent-Type: image/png\r\n">, "commit"=>"上传"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NoMethodError (undefined method `f' for #<MyuploaderUploader:0xb37a5478>):
+  
+app/controllers/picture_controller.rb:7:in `mystore'
+Started POST "/picture/mystore" for 127.0.0.1 at 2018-12-18 08:25:13 -0800
+Processing by PictureController#mystore as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZYfPdzYw+jNyC/Rlu0FFtjxugXvlN/9wAv8wQdu9eQVdpRUGxZ+JiVA7e+Hk4XArkVkv/LvKryFpLGnKxweB0A==", "localfile"=>#<ActionDispatch::Http::UploadedFile:0xb415f374 @tempfile=#<Tempfile:/tmp/RackMultipart20181218-3842-1onclue.png>, @original_filename="屏幕截图(1).png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"localfile\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE(1).png\"\r\nContent-Type: image/png\r\n">, "commit"=>"上传"}
+No template found for PictureController#mystore, rendering head :no_content
+Completed 204 No Content in 16ms
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-18 08:25:45 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 08:25:46 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  Rendering picture/show.html.erb within layouts/application
+  Rendered picture/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 49ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/picture/mystore" for 127.0.0.1 at 2018-12-18 08:25:49 -0800
+Processing by PictureController#mystore as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pCcq+o1DJ7zzVoM+lMMU1fc1HErvkc7F8Kdl2GAHfTSY4wxlIMgYA3dLC45Ol1Ag8hepGdFkK8QDl/n6KsjjBA==", "localfile"=>#<ActionDispatch::Http::UploadedFile:0xb2c86790 @tempfile=#<Tempfile:/tmp/RackMultipart20181218-3842-179cbcz.png>, @original_filename="屏幕截图(1).png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"localfile\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE(1).png\"\r\nContent-Type: image/png\r\n">, "commit"=>"上传"}
+No template found for PictureController#mystore, rendering head :no_content
+Completed 204 No Content in 27ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 08:26:45 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  Rendering picture/show.html.erb within layouts/application
+  Rendered picture/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 08:27:26 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  Rendering picture/show.html.erb within layouts/application
+  Rendered picture/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 20ms (Views: 19.0ms)
+
+
+Started POST "/picture/mystore" for 127.0.0.1 at 2018-12-18 08:27:30 -0800
+Processing by PictureController#mystore as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5RDCB/fyepcWxnWaOMpAF1mVyHOARGBai8GOsbGNgT7dMhh2BF0JLTT2+h5nanWK9KJm9N65MAvgEtc6rTd56w==", "localfile"=>#<ActionDispatch::Http::UploadedFile:0xb345b614 @tempfile=#<Tempfile:/tmp/RackMultipart20181218-3842-1lukb6d.png>, @original_filename="屏幕截图(1).png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"localfile\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE(1).png\"\r\nContent-Type: image/png\r\n">, "commit"=>"上传"}
+No template found for PictureController#mystore, rendering head :no_content
+Completed 204 No Content in 26ms
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-18 08:27:58 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 60ms (Views: 53.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 08:27:59 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  Rendering picture/show.html.erb within layouts/application
+  Rendered picture/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 32ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/picture/mystore" for 127.0.0.1 at 2018-12-18 08:28:02 -0800
+Processing by PictureController#mystore as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qCy6G+GAjohX5kofkSJBcQdNaQ1a5nMkTZwAvZjG5B+U6JyETAuxN9P7wq9LdgWEAm/cXmQTliW+rJyf0gl6Lw==", "localfile"=>#<ActionDispatch::Http::UploadedFile:0xbb05c88 @tempfile=#<Tempfile:/tmp/RackMultipart20181218-3842-q91suu.png>, @original_filename="屏幕截图(1).png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"localfile\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE(1).png\"\r\nContent-Type: image/png\r\n">, "commit"=>"上传"}
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `pr' for #<MyuploaderUploader:0xb39b4a98>
+Did you mean?  p):
+  
+app/uploaders/myuploader_uploader.rb:13:in `store_dir'
+app/controllers/picture_controller.rb:8:in `mystore'
+Started GET "/picture/mystore" for 127.0.0.1 at 2018-12-18 08:28:03 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/picture/mystore"):
+  
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
