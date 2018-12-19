@@ -1,0 +1,2 @@
+<h1  align="center">Welcome to PHTRS system</h1>
+<h5 align="center"> <%= link_to "Submit pothole", potholes_path %></h5>

@@ -1,16 +1,16 @@
-<h1>Picture#show</h1>
-<p>Find me in app/views/picture/show.html.erb</p>
+<h1>Pothole Picture Show</h1>
+<p=#>Find me in app/views/picture/show.html.erb</p>
 
 
 <%= form_tag '/picture/mystore' , :multipart => true do%>
     <%= file_field_tag :localfile %>  
     <%= hidden_field_tag :pothole_id, params[:pothole_id]%> 
-    <%= submit_tag "上传"%>
+    <%= submit_tag "Upload"%>
 <% end %>
 
 <ul id="pictures_list">
 	<% @picture.each do |pic| -%>
-	<li><%= image_tag pic.path.to_s -%> -%>
+	<li><%= image_tag pic.path.to_s -%>
 	</li>
 	<% end -%>
 </ul>

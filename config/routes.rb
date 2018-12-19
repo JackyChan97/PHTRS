@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'home/index'
+
+  root({:to=>"home#index"})
   get 'picture/show'
   match '/picture', to: 'picture#show', via: 'get'
   resources :potholes

@@ -5927,3 +5927,923 @@ Processing by PictureController#show as HTML
 Completed 200 OK in 39ms (Views: 32.9ms | ActiveRecord: 2.2ms)
 
 
+Started GET "/potholes" for 127.0.0.1 at 2018-12-18 20:40:36 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 245ms (Views: 183.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/picture?pothole_id=6" for 127.0.0.1 at 2018-12-18 20:40:43 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"6"}
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering picture/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."pothole_id" = ?[0m  [["pothole_id", 6]]
+  Rendered picture/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 220ms (Views: 21.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/picture/mystore" for 127.0.0.1 at 2018-12-18 20:40:47 -0800
+Processing by PictureController#mystore as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/cxQ6cTBtie9UgUDK1QXSocIGY9pQPPkEsWT2+8610HxZBzdBTsJHzWfOXZmZiqmcpdnAyX9FcCx95EYtw77uQ==", "localfile"=>#<ActionDispatch::Http::UploadedFile:0xabe3f70 @tempfile=#<Tempfile:/tmp/RackMultipart20181218-3318-13v7f64.png>, @original_filename="屏幕截图(1).png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"localfile\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE(1).png\"\r\nContent-Type: image/png\r\n">, "pothole_id"=>"6", "commit"=>"上传"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "pictures" ("path", "pothole_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["path", "/uploads/nil_class/3/2018-12-18%2020%3A40%3A47%20-0800%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE_1_.png"], ["pothole_id", 6], ["created_at", "2018-12-19 04:40:47.289305"], ["updated_at", "2018-12-19 04:40:47.289305"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/picture?pothole_id=6
+Completed 302 Found in 23ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/picture?pothole_id=6" for 127.0.0.1 at 2018-12-18 20:40:47 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"6"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering picture/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."pothole_id" = ?[0m  [["pothole_id", 6]]
+  Rendered picture/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-18 20:49:20 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 20:49:22 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering picture/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."pothole_id" = ?[0m  [["pothole_id", 3]]
+  Rendered picture/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/picture/mystore" for 127.0.0.1 at 2018-12-18 20:49:26 -0800
+Processing by PictureController#mystore as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4Dvs0fXZjH+RO3Whf6AJWSr3g/8cAC3jTKxegGTsgpDsk6DlNCMzRxn2SdQykjS132j9c1C9y8fvnlxDPNiuaA==", "localfile"=>#<ActionDispatch::Http::UploadedFile:0xb43542ec @tempfile=#<Tempfile:/tmp/RackMultipart20181218-3318-1vyn1xw.png>, @original_filename="屏幕截图(1).png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"localfile\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE(1).png\"\r\nContent-Type: image/png\r\n">, "pothole_id"=>"3", "commit"=>"Upload"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pictures" ("path", "pothole_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["path", "/uploads/nil_class/3/2018-12-18%2020%3A49%3A26%20-0800%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE_1_.png"], ["pothole_id", 3], ["created_at", "2018-12-19 04:49:26.830465"], ["updated_at", "2018-12-19 04:49:26.830465"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/picture?pothole_id=3
+Completed 302 Found in 7ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 20:49:26 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering picture/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."pothole_id" = ?[0m  [["pothole_id", 3]]
+  Rendered picture/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 20:50:04 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering picture/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."pothole_id" = ?[0m  [["pothole_id", 3]]
+  Rendered picture/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 39ms (Views: 38.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 20:50:30 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering picture/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."pothole_id" = ?[0m  [["pothole_id", 3]]
+  Rendered picture/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 20:50:38 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering picture/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."pothole_id" = ?[0m  [["pothole_id", 3]]
+  Rendered picture/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 20:50:47 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering picture/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."pothole_id" = ?[0m  [["pothole_id", 3]]
+  Rendered picture/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 20:50:53 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering picture/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."pothole_id" = ?[0m  [["pothole_id", 3]]
+  Rendered picture/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/picture?pothole_id=3" for 127.0.0.1 at 2018-12-18 20:50:58 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"3"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering picture/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."pothole_id" = ?[0m  [["pothole_id", 3]]
+  Rendered picture/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-18 20:51:11 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/potholes/3" for 127.0.0.1 at 2018-12-18 20:51:31 -0800
+Processing by PotholesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HdeAcY+x4QYSIZcUQ78TDoaYiEKiATpaZ+w9Yc8SyMbFYR8InQPdQgG+L5QaC5kC8ZOZxyUIno/fHE7oFsSavg==", "id"=>"3"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "potholes" WHERE "potholes"."id" = ?[0m  [["id", 3]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/potholes
+Completed 302 Found in 5ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-18 20:51:31 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-18 20:52:36 -0800
+  
+ActionController::RoutingError (uninitialized constant PotholeController):
+  
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.6.1) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.6.1) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-12-18 20:52:42 -0800
+  
+ActionController::RoutingError (uninitialized constant PotholeController):
+  
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.6.1) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.6.1) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-12-18 20:53:27 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 38ms (Views: 23.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pootholes" for 127.0.0.1 at 2018-12-18 20:53:36 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/pootholes"):
+  
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/potholes" for 127.0.0.1 at 2018-12-18 20:53:43 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 22ms (Views: 21.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/picture?pothole_id=4" for 127.0.0.1 at 2018-12-18 20:54:09 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"4"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering picture/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."pothole_id" = ?[0m  [["pothole_id", 4]]
+  Rendered picture/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 36ms (Views: 28.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/picture?pothole_id=5" for 127.0.0.1 at 2018-12-18 20:54:14 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"5"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering picture/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."pothole_id" = ?[0m  [["pothole_id", 5]]
+  Rendered picture/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/picture?pothole_id=6" for 127.0.0.1 at 2018-12-18 20:54:17 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"6"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering picture/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."pothole_id" = ?[0m  [["pothole_id", 6]]
+  Rendered picture/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/potholes/6" for 127.0.0.1 at 2018-12-18 20:54:21 -0800
+Processing by PotholesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cYQo2voAmJBs6A6uIsr4o+tzEiXKd2u3YXj5ZM7tMOKpMrej6LKk1H93ti57fnKvnHgDoE1+z2LZiIrtFztimg==", "id"=>"6"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "potholes" WHERE "potholes"."id" = ?[0m  [["id", 6]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/potholes
+Completed 302 Found in 5ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-18 20:54:21 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/picture?pothole_id=7" for 127.0.0.1 at 2018-12-18 20:54:22 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"7"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering picture/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."pothole_id" = ?[0m  [["pothole_id", 7]]
+  Rendered picture/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/picture?pothole_id=8" for 127.0.0.1 at 2018-12-18 20:54:25 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"8"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering picture/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."pothole_id" = ?[0m  [["pothole_id", 8]]
+  Rendered picture/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/picture?pothole_id=9" for 127.0.0.1 at 2018-12-18 20:54:29 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"9"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering picture/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."pothole_id" = ?[0m  [["pothole_id", 9]]
+  Rendered picture/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-18 20:55:56 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-19 06:34:47 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 657ms (Views: 637.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/picture?pothole_id=4" for 127.0.0.1 at 2018-12-19 06:34:51 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"4"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/rails/PHTRS/app/uploaders/myuploader_uploader.rb:25: syntax error, unexpected tLABEL, expecting keyword_do or '{' or '('
+   process scale: [200, 300]
+                 ^
+/home/rails/PHTRS/app/uploaders/myuploader_uploader.rb:28: syntax error, unexpected keyword_do_block
+      do something
+        ^):
+  
+app/uploaders/myuploader_uploader.rb:25: syntax error, unexpected tLABEL, expecting keyword_do or '{' or '('
+app/uploaders/myuploader_uploader.rb:28: syntax error, unexpected keyword_do_block
+app/models/picture.rb:3:in `<class:Picture>'
+app/models/picture.rb:1:in `<top (required)>'
+app/controllers/picture_controller.rb:6:in `show'
+Started GET "/picture?pothole_id=4" for 127.0.0.1 at 2018-12-19 06:35:08 -0800
+Processing by PictureController#show as HTML
+Started GET "/" for 127.0.0.1 at 2018-12-19 06:35:18 -0800
+Started GET "/picture?pothole_id=4" for 127.0.0.1 at 2018-12-19 06:35:18 -0800
+  Parameters: {"pothole_id"=>"4"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering picture/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."pothole_id" = ?[0m  [["pothole_id", 4]]
+  Rendered picture/show.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 169ms (Views: 45.7ms | ActiveRecord: 1.3ms)
+
+
+Processing by PotholesController#index as HTML
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"4"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 35ms (Views: 25.2ms | ActiveRecord: 0.3ms)
+
+
+  Rendering picture/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."pothole_id" = ?[0m  [["pothole_id", 4]]
+  Rendered picture/show.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 57ms (Views: 22.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-19 06:43:42 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 149ms (Views: 145.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-12-19 06:43:45 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/homes" for 127.0.0.1 at 2018-12-19 06:44:00 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/homes"):
+  
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-12-19 06:44:03 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-19 06:46:59 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 26ms (Views: 25.9ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-19 06:47:01 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 38ms (Views: 34.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-19 06:47:47 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-19 06:49:23 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-19 06:49:24 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 29ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-19 06:50:55 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-19 06:51:03 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-19 06:51:03 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-19 06:51:12 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-19 06:51:20 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-19 06:51:29 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-19 06:51:51 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-19 06:51:54 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 56ms (Views: 55.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/potholes/4/edit" for 127.0.0.1 at 2018-12-19 07:39:29 -0800
+Processing by PotholesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPothole Load (0.7ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering potholes/edit.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (181.8ms)
+  Rendered potholes/edit.html.erb within layouts/application (183.8ms)
+Completed 200 OK in 219ms (Views: 210.6ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/potholes/4" for 127.0.0.1 at 2018-12-19 07:39:33 -0800
+Processing by PotholesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AyvxWmv2bQXs406jCpq2nll6yWWBx29n2YjO1fGhhqR46MZ3F11CYDqi/7fQFimM88kh7QJCKq2vpNZUfP8dQg==", "pothole"=>{"streetAdress"=>"", "size"=>"5", "location"=>"wer", "district"=>"ew"}, "commit"=>"Update Pothole", "id"=>"4"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering potholes/edit.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (2.6ms)
+  Rendered potholes/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 28ms (Views: 24.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/potholes/4" for 127.0.0.1 at 2018-12-19 07:39:39 -0800
+Processing by PotholesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Afvv+IdxeZJLZ72wicZmpn5pZAIWI2nndo2G5b2QWzB1O2DJU3UinAIq1jubX+vXnb4ozhatGUVh3i3dTFEvkg==", "pothole"=>{"streetAdress"=>"", "size"=>"5", "location"=>"", "district"=>""}, "commit"=>"Update Pothole", "id"=>"4"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering potholes/edit.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (3.3ms)
+  Rendered potholes/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 46ms (Views: 40.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-19 08:14:24 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-19 08:54:51 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.4ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 55ms (Views: 49.5ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/potholes/4" for 127.0.0.1 at 2018-12-19 08:54:55 -0800
+Processing by PotholesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bdIA1dMU5eiXfVPH+RMQPxO6Q242nAZ6AeyhRuVsPSsZEo/kBxC+5t4wOEzrip1O8G0PojYSdtgWvwp+FK1JiQ==", "id"=>"4"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (9.9ms)[0m  [1m[31mDELETE FROM "potholes" WHERE "potholes"."id" = ?[0m  [["id", 4]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/potholes
+Completed 302 Found in 19ms (ActiveRecord: 12.3ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-19 08:54:55 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/potholes/5" for 127.0.0.1 at 2018-12-19 08:54:56 -0800
+Processing by PotholesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jSmvWJn66pohg4LPnRyuVNUrlVshBhLIn74tylls/qv56SBpTf6xlGjO6USPhSMlNvzZlyGIYmqI7YbyqK2KCQ==", "id"=>"5"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[31mDELETE FROM "potholes" WHERE "potholes"."id" = ?[0m  [["id", 5]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/potholes
+Completed 302 Found in 7ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-19 08:54:56 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 37ms (Views: 35.8ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/potholes/7" for 127.0.0.1 at 2018-12-19 08:54:58 -0800
+Processing by PotholesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bQWxIKkStbBU80KeoJdVbEA4hULTV+VeEgQMiw28vlMZxT4RfRbuvh2+KRWyDtgdo+/JjtPZlfwFV6ez/H3K8Q==", "id"=>"7"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "potholes" WHERE "potholes"."id" = ?[0m  [["id", 7]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/potholes
+Completed 302 Found in 7ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-19 08:54:58 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/potholes/8" for 127.0.0.1 at 2018-12-19 08:54:59 -0800
+Processing by PotholesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QfH2oOVYLd9yQo+p/RS5Zcm25HcumkkPE2x8zYRyoTw1MXmRMVx20TsP5CLvjTQUKmGouy4UOa0EP9f1dbPVng==", "id"=>"8"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[31mDELETE FROM "potholes" WHERE "potholes"."id" = ?[0m  [["id", 8]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/potholes
+Completed 302 Found in 8ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-19 08:54:59 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 40ms (Views: 39.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/potholes/9" for 127.0.0.1 at 2018-12-19 08:55:01 -0800
+Processing by PotholesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"V0GET4Cd8cBYvvCyBqFJvcGUsLbU6u+xbFyoIxXnFqwjgQt+VJmqzhHzmzkUOMTMIkP8etRknxN7DwMb5CZiDg==", "id"=>"9"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[31mDELETE FROM "potholes" WHERE "potholes"."id" = ?[0m  [["id", 9]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/potholes
+Completed 302 Found in 8ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-19 08:55:01 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-19 08:55:02 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (5.9ms)
+  Rendered potholes/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 32ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/potholes" for 127.0.0.1 at 2018-12-19 08:55:35 -0800
+Processing by PotholesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WKIa6EhY1cwas8qyv2JEAJDzbIHmqYY6iI4evnL6AUMRKxyAuZ8I2TWhY6Q8K20Awyltrcp8zVpyTpUg6iDWGQ==", "pothole"=>{"streetAdress"=>"zhonghuandongRoad", "size"=>"4", "location"=>"middle", "district"=>"guangzhou"}, "commit"=>"Create Pothole"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "potholes" ("streetAdress", "size", "location", "district", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["streetAdress", "zhonghuandongRoad"], ["size", 4], ["location", "middle"], ["district", "guangzhou"], ["created_at", "2018-12-19 16:55:35.138174"], ["updated_at", "2018-12-19 16:55:35.138174"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/potholes/10
+Completed 302 Found in 14ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/potholes/10" for 127.0.0.1 at 2018-12-19 08:55:35 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering potholes/show.html.erb within layouts/application
+  Rendered potholes/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-19 08:55:37 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/potholes/new" for 127.0.0.1 at 2018-12-19 08:55:39 -0800
+Processing by PotholesController#new as HTML
+  Rendering potholes/new.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (2.1ms)
+  Rendered potholes/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-19 08:55:48 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/potholes/10" for 127.0.0.1 at 2018-12-19 08:56:05 -0800
+Processing by PotholesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering potholes/show.html.erb within layouts/application
+  Rendered potholes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-19 08:56:23 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.2ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/potholes/10/edit" for 127.0.0.1 at 2018-12-19 08:56:25 -0800
+Processing by PotholesController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering potholes/edit.html.erb within layouts/application
+  Rendered potholes/_form.html.erb (2.2ms)
+  Rendered potholes/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/potholes" for 127.0.0.1 at 2018-12-19 08:56:42 -0800
+Processing by PotholesController#index as HTML
+  Rendering potholes/index.html.erb within layouts/application
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT "potholes".* FROM "potholes"[0m
+  Rendered potholes/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/picture?pothole_id=10" for 127.0.0.1 at 2018-12-19 09:10:19 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"10"}
+  [1m[36mPothole Load (0.3ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering picture/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."pothole_id" = ?[0m  [["pothole_id", 10]]
+  Rendered picture/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 37ms (Views: 27.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/picture/mystore" for 127.0.0.1 at 2018-12-19 09:11:14 -0800
+Processing by PictureController#mystore as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gG3qC+vqoaNGj4P9vBTLsi96lsrGx4szbX5o0kFB4YmYbl7gopBW9PxgjVupT2D++/vUvnfkKm3qkciWCOGMyg==", "localfile"=>#<ActionDispatch::Http::UploadedFile:0xb51e8600 @tempfile=#<Tempfile:/tmp/RackMultipart20181219-3170-gn27jh.jpg>, @original_filename="3.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"localfile\"; filename=\"3.jpg\"\r\nContent-Type: image/jpeg\r\n">, "pothole_id"=>"10", "commit"=>"Upload"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "pictures" ("path", "pothole_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["path", "/uploads/nil_class/3/2018-12-19%2009%3A11%3A14%20-08003.jpg"], ["pothole_id", 10], ["created_at", "2018-12-19 17:11:14.363365"], ["updated_at", "2018-12-19 17:11:14.363365"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/picture?pothole_id=10
+Completed 302 Found in 25ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/picture?pothole_id=10" for 127.0.0.1 at 2018-12-19 09:11:14 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"10"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering picture/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."pothole_id" = ?[0m  [["pothole_id", 10]]
+  Rendered picture/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/picture?pothole_id=10" for 127.0.0.1 at 2018-12-19 09:11:53 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"10"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering picture/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."pothole_id" = ?[0m  [["pothole_id", 10]]
+  Rendered picture/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 42ms (Views: 39.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/picture?pothole_id=10" for 127.0.0.1 at 2018-12-19 09:13:16 -0800
+Processing by PictureController#show as HTML
+  Parameters: {"pothole_id"=>"10"}
+  [1m[36mPothole Load (0.1ms)[0m  [1m[34mSELECT  "potholes".* FROM "potholes" WHERE "potholes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering picture/show.html.erb within layouts/application
+  [1m[36mPicture Load (0.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."pothole_id" = ?[0m  [["pothole_id", 10]]
+  Rendered picture/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 43ms (Views: 41.4ms | ActiveRecord: 0.2ms)
+
+
