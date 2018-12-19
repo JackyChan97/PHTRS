@@ -1,2 +1,4 @@
 class Picture < ApplicationRecord
+belongs_to:pothole
+mount_uploader :location, MyuploaderUploader 
 end
